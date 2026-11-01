@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-slate-925: #0B0E14;
+  --color-slate-915: #0F131C;
+  --color-slate-850: #171D28;
+  --color-emerald-500: #10B981;
+  --color-rose-500: #EF4444;
+  --color-amber-500: #F59E0B;
+}
+
+/* Custom dark scrollbars for dense financial tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0E14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2638;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D374D;
+}
+
+/* Number display and financial tabular rules */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
